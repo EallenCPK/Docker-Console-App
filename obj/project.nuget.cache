@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mQCE/UEAfxdeXoINb+uZ6Sz5D+g81slQexhUQ/pGenXMujmIxxdyoFBgPW8q11031m898EZhnSP0b0t4fBMDJg==",
+  "dgSpecHash": "jDoDfo5y+ofCokglk0pCesjjdM8/z6letK2Ay5knu8TboX68f51D+2aElkxVjRfAxiOoF3GVBZwXiNFziZagTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\eallen\\Desktop\\dotnetDocker\\dotnetDocker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\eallen\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
