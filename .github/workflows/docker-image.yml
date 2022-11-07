@@ -19,7 +19,8 @@ jobs:
       run: docker build -t hello .
     # Run 
     - name: Run Docker Image
-      run: docker run hello
+      run: docker run hell
     # Curl 
-    - name: Curl 
-      run : curl https://jsonplaceholder.typicode.com/todos/1
+    - name: If fail
+      if: failure()
+      run: echo "Failed"
