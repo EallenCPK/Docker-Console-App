@@ -19,7 +19,7 @@ jobs:
       run: docker build -t hello .
     # Run 
     - name: Run Docker Image
-      run: docker run hell
+      run: docker run hello
     # Curl 
     - name: If fail
       if: failure()
