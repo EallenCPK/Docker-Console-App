@@ -24,3 +24,6 @@ jobs:
     - name: If fail
       if: failure()
       run: echo "Failed"
+    - name: If success
+      if: success()
+      run: echo "Success"
