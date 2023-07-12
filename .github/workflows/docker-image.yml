@@ -1,10 +1,8 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
 
@@ -12,30 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Log in with Azure
-      uses: azure/login@v1
-      with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+#     - name: Log in with Azure
+#       uses: azure/login@v1
+#       with:
+#           creds: '${{ secrets.AZURE_CREDENTIALS }}'
   
-    - name: 'Run Azure CLI commands'
-      run: |
-          az account show
-          az group list
-          pwd 
-#     - uses: actions/checkout@v3
-#     # Build 
-#     - name: Build Docker Image
-#       run: docker build -t hello .
-#     # Run 
-#     - name: Run Docker Image
-#       run: docker run hello
-#     # Curl 
-#     - name: If fail
-#       if: failure()
-#       run: echo "Failed"
-#     - name: If success
-#       if: success()
-#       run: echo "Success"
+#     - name: 'Run Azure CLI commands'
+#       run: |
+#           az account show
+#           az group list
+#           pwd 
+    - uses: actions/checkout@v3
+    # Build 
+    - name: Build Docker Image
+      run: docker build -t hello .
+    # Run 
+    - name: Run Docker Image
+      run: docker run hello
+    # Curl 
+    - name: If fail
+      if: failure()
+      run: echo "Failed"
+    - name: If success
+      if: success()
+      run: echo "Success"
       
       
       
