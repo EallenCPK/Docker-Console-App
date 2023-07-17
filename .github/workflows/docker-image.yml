@@ -12,14 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Login via Az module
-      uses: azure/login@v1
-      with:
-        creds: ${{secrets.AZURE_CREDENTIALS}}
-        enable-AzPSSession: true 
+#     - name: Login via Az module
+#       uses: azure/login@v1
+#       with:
+#         creds: ${{secrets.AZURE_CREDENTIALS}}
+#         enable-AzPSSession: true 
   
     - name: 'Run Azure CLI commands'
       run: |
+          az login -u "46e799f7-128e-4722-b665-596e16d9291c" -p "2-J8Q~dQpc4ENNKZ0Usr.TxxBbznPVB2j95swa55"
           az account show
           az group list
           pwd 
