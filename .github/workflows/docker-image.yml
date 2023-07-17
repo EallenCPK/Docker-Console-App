@@ -16,33 +16,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-#     - name: Login via Az module
-#       uses: azure/login@v1
-#       with:
-#         creds: ${{secrets.AZURE_CREDENTIALS}}
-#         enable-AzPSSession: true 
-  
-     - name: Az CLI login
-       uses: azure/login@v1
-       with:
-          client-id: "46e799f7-128e-4722-b665-596e16d9291c"
-          tenant-id: "9604c138-e5d6-4c98-a4fc-2d67d6fd954e"
-          subscription-id: "4b88b802-abfd-413d-9c62-a3357ce9b003"
-          
-#     - uses: actions/checkout@v3
-#     # Build 
-#     - name: Build Docker Image
-#       run: docker build -t hello .
-#     # Run 
-#     - name: Run Docker Image
-#       run: docker run hello
-#     # Curl 
-#     - name: If fail
-#       if: failure()
-#       run: echo "Failed"
-#     - name: If success
-#       if: success()
-#       run: echo "Success"
+    - uses: actions/checkout@v3
+    # Build 
+    - name: Build Docker Image
+      run: docker build -t hello .
+    # Run 
+    - name: Run Docker Image
+      run: docker run hello
+    # Curl 
+    - name: If fail
+      if: failure()
+      run: echo "Failed"
+    - name: If success
+      if: success()
+      run: echo "Success"
       
       
       
