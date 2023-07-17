@@ -12,10 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Log in with Azure
+    - name: Login via Az module
       uses: azure/login@v1
       with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+        enable-AzPSSession: true 
   
     - name: 'Run Azure CLI commands'
       run: |
