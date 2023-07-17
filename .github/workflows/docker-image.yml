@@ -23,6 +23,7 @@ jobs:
           az account show
           az group list
           pwd 
+          
 #     - uses: actions/checkout@v3
 #     # Build 
 #     - name: Build Docker Image
