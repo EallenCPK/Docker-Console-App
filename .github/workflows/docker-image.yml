@@ -22,12 +22,12 @@ jobs:
 #         creds: ${{secrets.AZURE_CREDENTIALS}}
 #         enable-AzPSSession: true 
   
-    - name: 'Run Azure CLI commands'
-      run: |
-          az login -u "46e799f7-128e-4722-b665-596e16d9291c" -p "2-J8Q~dQpc4ENNKZ0Usr.TxxBbznPVB2j95swa55"
-          az account show
-          az group list
-          pwd 
+     - name: Az CLI login
+       uses: azure/login@v1
+       with:
+          client-id: "46e799f7-128e-4722-b665-596e16d9291c"
+          tenant-id: "9604c138-e5d6-4c98-a4fc-2d67d6fd954e"
+          subscription-id: "4b88b802-abfd-413d-9c62-a3357ce9b003"
           
 #     - uses: actions/checkout@v3
 #     # Build 
