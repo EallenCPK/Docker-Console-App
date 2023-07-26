@@ -2,7 +2,10 @@ name: Docker Image CI
 
 on:
   workflow_dispatch:
-    
+  
+env:
+  HELLO: "Hello World"
+  
 permissions:
       id-token: write
       contents: read
@@ -19,7 +22,7 @@ jobs:
       run: docker build -t hello .
     # Run 
     - name: Run Docker Image
-      run: docker run hello
+      run: docker run -e HELLO=$HELLO hello
     # Curl 
     - name: If fail
       if: failure()
