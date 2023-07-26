@@ -1,4 +1,11 @@
 
+string helloValue = Environment.GetEnvironmentVariable("HELLO");
 
-
-Console.WriteLine("Hello, World!");
+if (string.IsNullOrEmpty(helloValue))
+{
+  Console.WriteLine("none");
+}
+else
+{
+   Console.WriteLine(helloValue);
+}
